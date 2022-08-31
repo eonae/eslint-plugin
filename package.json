@@ -1,0 +1,40 @@
+{
+  "name": "@eonae/eslint-plugin",
+  "version": "1.0.0",
+  "description": "Plugin for eslint",
+  "main": "dist/index",
+  "types": "dist/index",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/eonae/eslint-plugin"
+  },
+  "files": [
+    "dist",
+    "*.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/ node_modules/",
+    "prebuild": "rm -rf dist/",
+    "build": "tsc --build tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "glob": "^7.2.0",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.2.0",
+    "eslint": ">=7.0.0"
+  },
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
+  "author": "eonae"
+}
